@@ -23,7 +23,7 @@ $wod  = new WOD();
 		}
 		$exercises_name = implode( ', ', $exercises_name );
 		?>
-		<div class="col-3 d-flex mb-5">
+		<div class="col-sm-6 col-md-4 col-lg-3 d-flex mb-5">
 
 			<div class="card flex-grow-1 border-primary">
 				<div
@@ -55,7 +55,7 @@ $wod  = new WOD();
 				<ul class="list-group list-group-flush  " data-toggle="tooltip" data-placement="top" title="Modalities">
 
 
-					<?php foreach ($_modalities as $item):?>
+					<?php foreach ( $_modalities as $item ): ?>
 						<a href="#" class="list-group-item  list-group-item-light list-group-item-action"><?= $item ?></a>
 					<?php endforeach; ?>
 				</ul>
