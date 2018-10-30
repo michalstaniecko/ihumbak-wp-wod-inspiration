@@ -1,0 +1,49 @@
+.wod-table {
+  @extend .small;
+}
+
+.wod-table-item {
+  height: 20px;
+  width: 100%;
+  border-bottom: 1px solid $border-color;
+}
+
+.wod-table-item-active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before {
+
+    content: '';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 14px;
+    height: 14px;
+    background-color: $primary;
+  }
+}
+
+.wod-table-heading {
+  line-height: 20px;
+}
+
+.wod-table-heading-right,
+.wod-table-heading-left {
+  @include make-col-ready;
+}
+
+$wod-table-heading-col: 4;
+$wod-table-heading-max: 12;
+.wod-table-heading-left {
+  @include make-col($wod-table-heading-col,$wod-table-heading-max);
+  font-weight: 700;
+}
+.wod-table-heading-right {
+  @include make-col(($wod-table-heading-max - $wod-table-heading-col),$wod-table-heading-max);
+}
+
+.wod-table-row-hightlight {
+  border-bottom-color: $primary;
+
+}
